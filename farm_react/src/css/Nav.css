@@ -1,0 +1,207 @@
+
+
+/* Navbar base */
+.header {
+  background-color: #0b3e04;
+  padding: 5px 40px;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #0b3e04;
+  color: white;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+/* Internal container */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Menu button for mobile */
+.menu-toggle {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #246b47;
+  color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .menu-toggle {
+    font-size: 20px;           /* Matches icon size */
+    padding: 4px;              /* Reduce padding */
+    margin: 0;
+    background: none;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+    width: auto;
+    height: auto;
+    display: block !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+
+  .menu-toggle:focus{
+    outline: none;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction:column;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    background-color: #2e8b57;
+    padding: 10px;
+    border-radius: 8px;
+    justify-content: center;
+  }
+  
+  .nav-links.open {
+    display: flex !important;
+  }
+}
+
+/* Footer css */
+.footer {
+  background-color: #0b3e04;
+  color: white;
+  padding: 30px 20px 20px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+}
+
+
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+  flex: 1 1 250px;
+}
+
+.footer-col-1 ul,
+.footer-col-2 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col-1 li,
+.footer-col-2 li {
+  margin-bottom: 10px;
+}
+
+.footer-col-1 a,
+.footer-col-2 a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-col-3 a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-col-3 a svg {
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.footer-col-3 a:hover {
+  color: #c4f4cc;
+}
+
+.footer-col-2 a:hover,
+.footer-col-1 a:hover {
+  color: #c4f4cc;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  border-top: 1px solid #ffffff4d;
+  padding-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+}
